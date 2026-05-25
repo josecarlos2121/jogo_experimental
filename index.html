@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covalent — Protótipo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Covalent <span>— Protótipo jogável</span></h1>
+      <p>Arrasta átomos da esquerda para a mesa molecular e cria moléculas estáveis.</p>
+    </header>
+
+    <main>
+      <section class="panel" id="rain-panel">
+        <div class="panel-title">
+          <h2>Chuva de Átomos</h2>
+          <button id="spawn-btn">Gerar átomo</button>
+        </div>
+        <p class="hint">Abundância simulada: H, O, C e N são mais comuns.</p>
+        <div id="rain-zone" aria-label="Zona de queda de átomos"></div>
+      </section>
+
+      <section class="panel" id="table-panel">
+        <div class="panel-title">
+          <h2>Mesa Molecular</h2>
+          <button id="clear-btn">Limpar molécula</button>
+        </div>
+        <p class="hint">Liga dois átomos clicando num e depois noutro.</p>
+        <div id="table-zone" aria-label="Zona molecular"></div>
+      </section>
+    </main>
+
+    <aside id="status">
+      <h3>Estado químico</h3>
+      <p><strong>Última validação:</strong> <span id="validation">—</span></p>
+      <p><strong>Pontuação:</strong> <span id="score">0</span></p>
+      <ul id="messages"></ul>
+    </aside>
+
+    <script src="game.js"></script>
+  </body>
+</html>
